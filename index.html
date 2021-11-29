@@ -10,13 +10,15 @@
     
   </head>
    <body>
-   
-<div id="container">
+   <h1 id="title">DOM Manipulation with Forms</h1>
+   <p id="description">The details entered in the form would be displayed in table below </p>
 
- <div class="text"><label>FirstName</label><input type="text" id="fname"></div><br>
-  <div class="text"><label>LastName</label><input type="text" id="lname"></div><br>
-  <div class="text"><label>Address</label><input type="text" id="add"></div><br>
-  <div class="text"><label>Pincode</label><input type="password" id="pass"></div><br>
+<div  id="container" >
+<form id="form">
+ <div class="form-group"><label>FirstName</label><input type="text" id="first-name" placeholder="First Name" required></div><br>
+  <div class="form-group"><label>LastName</label><input type="text" id="last-name" placeholder="Last Name" required></div><br>
+  <div class="form-group"><label>Address</label><textarea type="text" id="address" placeholder="Address" required></textarea></div><br>
+  <div class="form-group"><label>Pincode</label><input type="text" id="pincode" placeholder="pincode" required></div><br>
 
   <div class="radio">
    <label>Select Gender</label><br><br>
@@ -36,12 +38,16 @@
     <input type="checkbox" id="chats" name="food" value="chats"><label for="chats"> Chats</label><br>
   
   </div>
- <br>
-  <button id="submit">Submit</button>
 
-  </div><br>
+ <br>
+  <button type="button" id="submit" value="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+  <br>
 
-  <table id="display">
+  
+  <div><table class="table">
+  <thead>
   <tr>
     <th>First Name</th>
     <th>Last Name</th>
@@ -50,11 +56,14 @@
     <th>Gender</th>
     <th>Food Choice</th>
   </tr>
-  
+  </thead>
+  <tbody>
+  </tbody>
+  </table>
+ </div>
+
 </body>
 
   <script src="script.js"></script>
   <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
 </html>
-
-<!-- the css selectors are inside the style tag -->
